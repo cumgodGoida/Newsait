@@ -4,7 +4,7 @@
     <title>Воспроизведение аудио</title>
 </head>
 <body>
-    <audio id="audioPlayer" controls>
+    <audio id="audioPlayer" controls autoplay>
         <source src="https://www.myinstants.com/media/sounds/zhestokie-stony.mp3" type="audio/mpeg">
         Ваш браузер не поддерживает элемент audio.
     </audio>
@@ -16,6 +16,10 @@
             var audio = document.getElementById("audioPlayer");
             audio.volume = 1.0; // 1.0 - максимальная громкость
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setMaxVolume();
+        });
     </script>
 </body>
 </html>
