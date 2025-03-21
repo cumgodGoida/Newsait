@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Воспроизведение аудио</title>
+</head>
+<body>
+    <audio id="audioPlayer" controls>
+        <source src="https://www.myinstants.com/media/sounds/zhestokie-stony.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает элемент audio.
+    </audio>
+
+    <button onclick="setMaxVolume()">Максимальная громкость</button>
+
+    <script>
+        function setMaxVolume() {
+            var audio = document.getElementById("audioPlayer");
+            audio.volume = 1.0; // 1.0 - максимальная громкость
+        }
+    </script>
+</body>
+</html>
