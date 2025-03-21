@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Воспроизведение звука</title>
+    <title>Автоматическое воспроизведение звука</title>
 </head>
 <body>
-    <audio id="myAudio" controls autoplay>
+    <audio id="myAudio" controls>
         <source src="ston.mp3" type="audio/mpeg">
         Ваш браузер не поддерживает элемент audio.
-    </audio>    
+    </audio>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        // Автоматическое воспроизведение при загрузке страницы
+        audio.autoplay = true;
+
+        // Дополнительно: обработка события canplaythrough для надежного воспроизведения
+        audio.addEventListener('canplaythrough', () => {
+            audio.play().catch(error => {
+                console.error('Ошибка автоматического воспроизведения:', error);
+            });
+        });
+
+        // Обработка ошибки загрузки аудио
+        audio.addEventListener('error', (error) => {
+            console.error('Ошибка загрузки аудио:', error);
+        });
+    </script>
 </body>
 </html>
