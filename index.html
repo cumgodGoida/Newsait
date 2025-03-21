@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Воспроизведение аудио</title>
+    <title>ахххахх~</title>
 </head>
 <body>
-    <audio id="audioPlayer" controls autoplay>
-        <source src="https://www.myinstants.com/media/sounds/zhestokie-stony.mp3" type="audio/mpeg">
-        Ваш браузер не поддерживает элемент audio.
+
+    <audio id="myAudio" autoplay>
+        <source src="ston.mp3" type="audio/ogg">
+        Your browser does not support the audio element.
     </audio>
 
-    <button onclick="setMaxVolume()">Максимальная громкость</button>
-
-    <script>
-        function setMaxVolume() {
-            var audio = document.getElementById("audioPlayer");
-            audio.volume = 1.0; // 1.0 - максимальная громкость
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            setMaxVolume();
-        });
-    </script>
 </body>
 </html>
